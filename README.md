@@ -24,6 +24,7 @@ Retail sales dataset containing order-level sales information including region, 
 - Category and sub-category contribution analysis
 - Monthly sales trend analysis
 - Top and bottom product performance
+- Identified top 3 products in each region using SQL window functions (RANK and PARTITION BY)
 
 ---
 
