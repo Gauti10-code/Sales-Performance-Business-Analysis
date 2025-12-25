@@ -1,8 +1,6 @@
 # Sales-Performance-Business-Analysis
 Sales performance analysis using SQL Server, Excel and Power BI
 
-# Sales Performance & Regional Business Analysis
-
 ## 📌 Objective
 To analyze retail sales data and identify region-wise and product-wise performance trends, enabling data-driven business decisions.
 
