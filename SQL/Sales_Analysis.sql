@@ -59,3 +59,22 @@ SELECT Region,
 FROM orders
 GROUP BY Region, Category
 ORDER BY Region;
+
+
+--Ranking Products within each region to know which product performs best in which region
+--finding top 3 products in each region
+with Product_sales AS
+(
+Select Region,
+       Product_Name,
+       SUM(Sales) as Total_Sales,
+       RANK() OVER(Partition by Region Order by SUM(Sales) DESC)As Prod_rank_in_region
+From orders
+Group by Region, Product_Name
+)
+Select Region,Product_Name,Total_Sales,Prod_rank_in_region
+From Product_sales
+Where Prod_rank_in_region<=3
+Order by Region,Prod_rank_in_region;
+
+
